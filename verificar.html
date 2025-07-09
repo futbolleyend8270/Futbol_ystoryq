@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verificación Humano</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function verificar() {
+      const checkbox = document.getElementById('soy-humano');
+      if (checkbox.checked) {
+        // Redirige a donde quieras después de la verificación
+        window.location.href = 'https://es.pornhub.com/view_video.php?viewkey=68611fcea4120';
+      } else {
+        alert('Por favor, marca la casilla para confirmar que eres humano.');
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Verificación de Humano</h1>
+  </header>
+
+  <main>
+    <section class="verificar">
+      <p>Marca la casilla para confirmar que eres humano y accede al contenido exclusivo:</p>
+      <label>
+        <input type="checkbox" id="soy-humano" />
+        Soy humano
+      </label>
+      <br />
+      <button onclick="verificar()">Verificar</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Historia del Fútbol</p>
+  </footer>
+</body>
+</html>

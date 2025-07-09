@@ -1,0 +1,181 @@
+/* style.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #056839, #003f23);
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fondo con pelota animada y difuminada */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.07;
+  transform: translate(-50%, -50%);
+  filter: blur(4px);
+  animation: flotar 10s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes flotar {
+  0%, 100% {
+    transform: translate(-50%, -48%);
+  }
+  50% {
+    transform: translate(-50%, -52%);
+  }
+}
+
+header {
+  background-color: rgba(0, 40, 0, 0.9);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px #000;
+}
+
+nav a {
+  color: #ffee58;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #fff176;
+}
+
+main {
+  padding: 30px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-left: 5px solid #ffee58;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  transition: transform 0.3s;
+}
+
+section:hover {
+  transform: scale(1.02);
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 12px;
+  background-color: rgba(0, 40, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.verificar {
+  text-align: center;
+  margin-top: 100px;
+  z-index: 1;
+  position: relative;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #ffee58;
+  color: #004d00;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #fff176;
+  transform: scale(1.05);
+}
+/* Para la galería de equipos */
+.equipos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.equipos-grid article {
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.equipos-grid article:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+.equipos-grid img {
+  max-width: 80px;
+  margin-bottom: 12px;
+}
+.verificar {
+  text-align: center;
+  margin-top: 100px;
+  z-index: 1;
+  position: relative;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #ffee58;
+  color: #004d00;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #fff176;
+  transform: scale(1.05);
+}
